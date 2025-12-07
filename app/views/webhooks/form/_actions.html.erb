@@ -4,13 +4,15 @@
         webhook_action_options,
         :first,
         :last do |item| %>
-    <li class="list-style-none margin-none flex align-center gap">
-      <label class="switch toggler__visible-when-off flex-item-no-shrink txt-x-small">
-        <%= item.check_box(class: "switch__input") %>
-        <span class="switch__btn round"></span>
-        <span class="for-screen-reader"><%= item.text %></span>
+    <li class="list-style-none margin-none">
+      <label class="flex align-center gap">
+        <span class="switch toggler__visible-when-off flex-item-no-shrink txt-x-small">
+          <%= item.check_box(class: "switch__input") %>
+          <span class="switch__btn round"></span>
+          <span class="for-screen-reader"><%= item.text %></span>
+        </span>
+        <span><%= item.text %></span>
       </label>
-      <span><%= item.text %></span>
     </li>
   <% end %>
 </ul>
